@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,118 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="conversor_de_divisas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convertor de divisas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxc-BP-y8z">
+                                <rect key="frame" x="81" y="40" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emd-8F-4Ar">
+                                <rect key="frame" x="75" y="81" width="170" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM9-he-w8n">
+                                <rect key="frame" x="147" y="131" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y6C-js-bmc">
+                                <rect key="frame" x="50" y="172" width="220" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Millas"/>
+                                    <segment title="Kilómetros"/>
+                                    <segment title="Yardas"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.083335189349475036" blue="0.10631036326503318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yq-3Y-snT">
+                                <rect key="frame" x="152" y="220" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BBI-Zv-exj">
+                                <rect key="frame" x="50" y="261" width="220" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Millas"/>
+                                    <segment title="Kilómetros"/>
+                                    <segment title="Yardas"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.069748602085306866" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eso-VB-SQe">
+                                <rect key="frame" x="115" y="409" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqn-Xc-Kcj">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LN3-Of-pxi"/>
+                                </constraints>
+                                <state key="normal" title="Convertir"/>
+                                <connections>
+                                    <action selector="convertir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uGl-4T-Xpk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5Z-BK-DEG">
+                                <rect key="frame" x="139" y="440" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.68424689618270729" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eso-VB-SQe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="01N-cD-piW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hqn-Xc-Kcj" secondAttribute="bottom" id="0CM-Sl-J4a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y6C-js-bmc" secondAttribute="trailing" constant="50" id="1dc-8r-04S"/>
+                            <constraint firstItem="BBI-Zv-exj" firstAttribute="top" secondItem="6Yq-3Y-snT" secondAttribute="bottom" constant="20" id="4gb-eu-mSN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hqn-Xc-Kcj" secondAttribute="trailing" id="5o4-UY-T1j"/>
+                            <constraint firstItem="hqn-Xc-Kcj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="85O-JP-PbV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emd-8F-4Ar" secondAttribute="trailing" constant="75" id="Al4-G6-oc1"/>
+                            <constraint firstItem="I5Z-BK-DEG" firstAttribute="top" secondItem="eso-VB-SQe" secondAttribute="bottom" constant="10" id="CPo-Ro-dy3"/>
+                            <constraint firstItem="kM9-he-w8n" firstAttribute="top" secondItem="emd-8F-4Ar" secondAttribute="bottom" constant="20" id="D6V-dI-uCM"/>
+                            <constraint firstItem="Y6C-js-bmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="E2a-S0-5yM"/>
+                            <constraint firstItem="Y6C-js-bmc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GzY-kF-YWE"/>
+                            <constraint firstItem="6Yq-3Y-snT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I68-Po-gQC"/>
+                            <constraint firstItem="eso-VB-SQe" firstAttribute="top" secondItem="BBI-Zv-exj" secondAttribute="bottom" constant="120" id="Jv7-2F-M5c"/>
+                            <constraint firstItem="emd-8F-4Ar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="Mtw-Q0-HxI"/>
+                            <constraint firstItem="BBI-Zv-exj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Nuy-6t-Kbr"/>
+                            <constraint firstItem="eso-VB-SQe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PYB-Vg-qRP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eso-VB-SQe" secondAttribute="trailing" constant="115" id="RYM-y4-8SW"/>
+                            <constraint firstItem="Pxc-BP-y8z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="USz-SK-IyI"/>
+                            <constraint firstItem="Y6C-js-bmc" firstAttribute="top" secondItem="kM9-he-w8n" secondAttribute="bottom" constant="20" id="X5Y-ZP-Uto"/>
+                            <constraint firstItem="emd-8F-4Ar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c5E-0J-Jx5"/>
+                            <constraint firstItem="kM9-he-w8n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dzf-i0-Xu1"/>
+                            <constraint firstItem="I5Z-BK-DEG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ecL-ca-VAZ"/>
+                            <constraint firstItem="BBI-Zv-exj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAq-OG-whD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BBI-Zv-exj" secondAttribute="trailing" constant="50" id="j5G-q5-a19"/>
+                            <constraint firstItem="emd-8F-4Ar" firstAttribute="top" secondItem="Pxc-BP-y8z" secondAttribute="bottom" constant="20" id="mjT-ig-oID"/>
+                            <constraint firstItem="6Yq-3Y-snT" firstAttribute="top" secondItem="Y6C-js-bmc" secondAttribute="bottom" constant="20" id="u1H-au-ZAs"/>
+                            <constraint firstItem="hqn-Xc-Kcj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wep-v4-16l"/>
+                            <constraint firstItem="Pxc-BP-y8z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwc-BJ-Z4P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="finalValueLabel" destination="I5Z-BK-DEG" id="kaY-ie-A4z"/>
+                        <outlet property="fromSegment" destination="Y6C-js-bmc" id="Tzg-xH-bHB"/>
+                        <outlet property="initialValueTextField" destination="emd-8F-4Ar" id="7Vg-dL-3pI"/>
+                        <outlet property="toSegment" destination="BBI-Zv-exj" id="wd0-YA-jbf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
